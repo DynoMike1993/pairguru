@@ -15,5 +15,5 @@ Rails.application.routes.draw do
       get :export
     end
   end
-  resoures :comments
+  resources :comments
 end
