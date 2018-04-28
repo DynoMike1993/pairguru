@@ -1,0 +1,24 @@
+.new-comment {
+  display:flex;
+  margin-bottom: 1em;
+  input {
+    height: 30px;
+    width: 100%;
+    padding: 0 5px;
+  }
+}
+
+.movie-container {
+  margin-bottom: 0;
+}
+
+#comments {
+  margin-bottom: 15px;
+  .comment {
+    padding-bottom:15px;
+    .user-email {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

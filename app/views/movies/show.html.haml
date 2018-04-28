@@ -1,5 +1,11 @@
 %h1= @movie.title
-.jumbotron
+.jumbotron.movie-container
   = @movie.description
 - if user_signed_in?
+  = render partial: 'comments/form'
+  #comments
+    - if @comments.any?
+      - @comments.each do |comment|
+        = render partial: 'comments/comment', locals: { comment: comment }
   %p= link_to 'Email me details about this movie', send_info_movie_path(@movie), class: 'btn btn-sm btn-default'
+  

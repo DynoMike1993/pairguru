@@ -1,0 +1,6 @@
+= simple_form_for @comment, remote: true do |f|
+  .new-comment
+    = f.input :content, label:false, wrapper:false, placeholder: "Leave a comment here ..."
+    = f.input :movie_id, as: :hidden, input_html: { value: @movie.id }
+    %button.btn.btn-default.btn-sm
+      Save

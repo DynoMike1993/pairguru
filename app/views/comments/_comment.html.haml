@@ -1,0 +1,14 @@
+.comment
+  .user-email
+    = comment.user.email
+    - if current_user.id == comment.user.id
+      = link_to "delete",
+                comment_path(comment.id),
+                method: :delete,
+                remote: true,
+                class: "btn btn-xs btn-default destroy-comment",
+                data: { confirm: 'Are you sure?'}
+  .date
+    = comment.created_at.strftime('%d-%m-%y %R')
+  .content
+    = comment.content
