@@ -16,4 +16,9 @@ Rails.application.routes.draw do
     end
   end
   resources :comments
+  resources :users do 
+    collection do
+      get :top_commenters
+    end
+  end
 end

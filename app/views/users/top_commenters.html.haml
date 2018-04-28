@@ -1,0 +1,9 @@
+#top-commenters
+  - if @decorated_users.any?
+    - @decorated_users.each do |user|
+      .top-commenter
+        %h4
+          = user.commented_movies
+  - else
+    %h3.text-center
+      = "There are no movies comments yet."
